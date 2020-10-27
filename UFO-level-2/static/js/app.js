@@ -52,10 +52,10 @@ function runEnter() {
 
     var filteredData = tableData.filter(d => 
                 d.datetime.trim() === searchForDate.trim() ||
-                d.city.trim() === searchForCity.trim() ||
-                d.state.trim() === searchForState.trim() ||
-                d.country.trim() === searchForCountry.trim() ||
-                d.shape.trim() === searchForShape.trim()
+                d.city.toLowerCase().trim() === searchForCity.toLowerCase().trim() ||
+                d.state.toLowerCase().trim() === searchForState.toLowerCase().trim() ||
+                d.country.toLowerCase().trim() === searchForCountry.toLowerCase().trim() ||
+                d.shape.toLowerCase().trim() === searchForShape.toLowerCase().trim()
             ); 
 
     filteredData.forEach(row => {
