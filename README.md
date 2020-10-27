@@ -19,10 +19,10 @@ You can handle this... right? The planet Earth needs to know what we have found!
 ### Level 1: Automatic Table and Date Search
 
 
-* [UFO Sightings Data](UFO-level-1/static/js/data.js)
+* Using the [UFO Sightings Data](UFO-level-1/static/js/data.js).
 
 
-* Using the UFO dataset and search through the `date/time` column to find rows that match the input.
+* Search through the `date/time` column to find rows that match the input.
 
 
 ### Level 2: Multiple Search Categories
