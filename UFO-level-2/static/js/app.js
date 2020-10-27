@@ -34,7 +34,7 @@ function runEnter() {
     // Prevent the page from refreshing
     d3.event.preventDefault();
     
-    // filter by datetime 
+    // filter  
     var inputElementDate = d3.select("#datetime");
     var searchForDate = inputElementDate.property("value");
 
