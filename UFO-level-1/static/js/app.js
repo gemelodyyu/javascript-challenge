@@ -6,17 +6,14 @@ var table = d3.select("#ufo-table");
 var tableBody = table.select("tbody");
 
 function createDefault() {
-    tableData.forEach(data => {
-        row = tableBody.append("tr")
-        row.append("td").text(data.datetime);
-        row.append("td").text(data.city);
-        row.append("td").text(data.state);
-        row.append("td").text(data.country);
-        row.append("td").text(data.shape);
-        row.append("td").text(data.durationMinutes);
-        row.append("td").text(data.comments);
+    tableData.forEach(row => {
+        var newRow = tableBody.append("tr")
+        for (key in row) {
+            var cell = newRow.append("td");
+            cell.text(row[key])
+        }
     });
-}
+}; 
 createDefault();
 
 // select buttons and input field
@@ -42,15 +39,12 @@ function runEnter() {
     tableBody = table.append("tbody");
 
     tableData.filter(d => d.datetime.trim() == searchFor.trim())
-        .forEach(data => {
-            var row = tableBody.append("tr");
-            row.append("td").text(data.datetime);
-            row.append("td").text(data.city);
-            row.append("td").text(data.state);
-            row.append("td").text(data.country);
-            row.append("td").text(data.shape);
-            row.append("td").text(data.durationMinutes);
-            row.append("td").text(data.comments);
+        .forEach(row => {
+            var newRow = tableBody.append("tr")
+            for (key in row) {
+                var cell = newRow.append("td");
+                cell.text(row[key])
+            }
         });
 };
 

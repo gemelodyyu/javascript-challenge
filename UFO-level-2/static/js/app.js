@@ -13,7 +13,7 @@ function createDefault() {
             cell.text(row[key])
         }
     });
-}
+}; 
 createDefault();
 
 // select buttons and input field
