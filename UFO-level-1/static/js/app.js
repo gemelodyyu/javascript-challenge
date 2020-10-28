@@ -38,7 +38,7 @@ function runEnter() {
     tableBody.remove();
     tableBody = table.append("tbody");
 
-    tableData.filter(d => d.datetime.trim() == searchFor.trim())
+    tableData.filter(data => data.datetime.trim() == searchFor.trim())
         .forEach(row => {
             var newRow = tableBody.append("tr")
             for (key in row) {
